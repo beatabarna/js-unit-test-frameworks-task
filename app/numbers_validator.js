@@ -10,7 +10,9 @@ export class NumbersValidator {
     const typeOfVariable = typeof number;
     if (typeOfVariable !== 'number') {
       throw new Error(
-        `[${number}] is not of type "Number" it is of type "${typeOfVariable}"`);
+          `[${number}] is not of type "Number" it is of type ` +
+          `"${typeOfVariable}"`,
+      );
     } else {
       return number % 2 === 0;
     }
